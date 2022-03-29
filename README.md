@@ -8,6 +8,18 @@ This library is for handling http requests within the context of a lambda functi
 
     npm install @raine-works/lambda-http-handler
 
+`SERVERLESS.YML`
+
+I'm using serverless as an example but this can be setup by configuring your OpenAPI config. The path and method should be set to ANY.
+
+    functions:
+        function-name:
+            handler: index.handler
+            events:
+                - http:
+                    path: /{ANY+}
+                    method: ANY
+
 `EXAMPLE`
 
     const { HTTP } = require('@raine-works/lambda-http-handler')
