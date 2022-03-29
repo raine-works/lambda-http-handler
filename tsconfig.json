@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true, 
+        "declaration": true, 
+        "declarationMap": true, 
+        "esModuleInterop": true, 
+        "removeComments": true, 
+        "lib": ["ESNext"], 
+        "module": "commonjs", 
+        "rootDir": "src", 
+        "outDir": ".build"
+    }
+}
