@@ -4,9 +4,11 @@ This library is for handling http requests within the context of a lambda functi
 
 ## Getting started
 
-`EXAMPLE`
+`INSTALL`
 
     npm install @raine-works/lambda-http-handler
+
+`EXAMPLE`
 
     const { HTTP } = require('@raine-works/lambda-http-handler')
 
