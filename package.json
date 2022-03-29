@@ -1,9 +1,20 @@
 {
   "name": "@raine-works/lambda-http-handler",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Express like http handling for lambda-proxy",
   "main": ".build/index.js",
   "files": [".build"],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raine-works/lambda-http-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raine-works/lambda-http-handler/issues"
+  },
+  "homepage": "https://github.com/raine-works/lambda-http-handler#readme",
   "scripts": {
     "build": "rimraf .build && tsc"
   },
