@@ -25,8 +25,8 @@ I'm using serverless as an example but this can be setup by configuring your Ope
     const { HTTP } = require('@raine-works/lambda-http-handler')
 
     export const handler = async (event, context, callback) => {
+        const http = new HTTP(event, callback, context)
         try {
-            const http = new HTTP(event, callback, context)
 
             http.method('GET', '/route/:id', (event) => {
                 http.status(200).headers({ content-type: 'application/json' }).body('Hi mom!').send()
@@ -107,3 +107,20 @@ The \_404 function is quick way to send a 404 status code back to the client. Th
 The \_500 function is a quick way to send an error message back to the client with a 500 status code.
 
     http._500('Internal server error...')
+
+## Middleware
+
+Setting up custom middleware.
+
+    exports.checkName = (http, event, next) => {
+        if (!event.body.name) {
+            http._400('Name is required')
+        }
+        next()
+    }
+
+Using middleware
+
+    http.method('POST', '/hello', checkName(), (event) => {
+        http._200(`Hello ${event.body.name}`)
+    })

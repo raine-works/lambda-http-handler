@@ -1,6 +1,6 @@
 {
   "name": "@raine-works/lambda-http-handler",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Express like http handling for lambda-proxy",
   "main": ".build/index.js",
   "files": [".build"],
